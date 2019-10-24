@@ -1,0 +1,17 @@
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  a {
+    color: $white;
+    text-decoration: none;
+    font-weight: 600;
+    &.is-active {
+
+      text-decoration: underline;
+
+    }
+  }
+
+}

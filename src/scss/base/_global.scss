@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+ }
+
+ html {
+   font-size: 62.5%;
+ }
+ body {
+   margin: 0;
+   width: 100%;
+   height: auto;
+   line-height: 1.6;
+   font-size: calc(10px + 2vmin);
+   font-size: $font-reg;
+   font-family: 'Roboto', sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+ #main {
+   display: flex;
+   flex-direction: row;
+   height: calc(100vh - 204px);
+   transition: min-height .25s ease-in-out;
+   @media only screen and (min-width: 768px) {
+
+   }
+ }
+ #main > .dashboard {
+   flex: 1;
+   margin: 0 1rem;
+   padding: 0;
+   border: 1px solid lightgray;
+   @media only screen and (min-width: 768px) {
+     padding: 1rem;
+   }
+ }
+ #main > .navigation,
+ #main > .results {
+   display: none;
+   flex: 0 0 15vw;
+   color: #ffffff;
+   display: none;
+   @media only screen and (min-width: 768px) {
+    display: flex;
+    transition: background,background-color .4s linear;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 0 10vw;
+  }
+ }
+ #main > .navigation {
+   order: -1;
+   display: none;
+   @media only screen and (min-width: 768px) {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     flex-wrap: wrap;
+   }
+ }
+ /*
+  header & footer replace on styled components */
+.navigation, .results {
+   padding: 1em;
+ }
+
+ header,footer {
+   margin: 0;
+ }
+
+ header {
+  height: 74px;
+  display: flex;
+  flex-direction: column;
+  background: #B71C1C;
+  margin-bottom: 4rem;
+  justify-content: center;
+  box-shadow:
+   0px 1px 8px 0px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14),
+   0px 3px 3px -2px rgba(0,0,0,0.12);
+   h1 {
+    color: #fafafa;
+    margin: 1.25rem 0;
+    font-size: $font-lg;
+    text-align: center;
+   }
+ }
+
+ footer {
+  background: #230202;
+  height: 60px;
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow:
+  0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 1px 0px rgba(0, 0, 0, 0.14),
+  0px 3px 0px 0px rgba(0, 0, 0, 0.12);
+   @media only screen and (min-width: 768px) {
+     margin-top: 3rem;
+   }
+  h4 {
+    color: #fafafa;
+    font-size: $font-sm;
+    margin: 1rem 0;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+ aside,.navigation,.results {
+    display: none;
+  }
+
+
+
+
+
+/*
+key-frames_______*/
+
+$frame-duration: 170ms;
+@keyframes fadeAnim {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  25.01% {
+    opacity: 0;
+  }
+}
+
+@for $i from 1 through 4 {
+  .Animation-frame:nth-child(#{ $i }) {
+    animation-delay: 250ms * ($i - 1);
+  }
+}
+
+
