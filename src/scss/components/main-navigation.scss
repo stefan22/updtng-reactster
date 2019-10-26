@@ -1,17 +1,138 @@
-.main-navigation {
-  display: flex;
+.main__navigation {
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  a {
-    color: $white;
-    text-decoration: none;
-    font-weight: 600;
-    &.is-active {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
 
-      text-decoration: underline;
+.main__navigation--navlink {
+  flex: 1 1 auto;
+  color: $whte;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
 
+.is-active .main__navigation--title > span {
+  color: white;
+}
+
+.main__navigation--icon {
+  background: aliceblue;
+}
+
+.main__navigation--title {
+  margin-left: 10px;
+  span {
+    display: block;
+    font-size: 70%;
+    font-style: italic;
+    color: #8d8f68;
+  }
+}
+
+
+.hd__hero {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url(../../images//skatepk.jpg)
+  no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 110px;
+  height: calc(100vh - 20px);
+  letter-spacing: 2px;
+  transition: background 2s 1s;
+  h1 {
+    text-align: center;
+    color: #fff;
+    span {
+      font-size: 25px;
+      color: #e8f380;
+      border-bottom: 2px solid #e8f380;
+      padding-bottom: 12px;
+      line-height: 3;
+    }
+  }
+  .hd__hero--mouse {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: 46px;
+    border-radius: 13px;
+    border: 2px solid #e8f380;
+    position: absolute;
+    bottom: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -26px;
+    span {
+      display: block;
+      margin: 6px auto;
+      width: 3px;
+      height: 3px;
+      border-radius: 4px;
+      background: #e8f380;
+      border: 1px solid transparent;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-name: scrollMouse;
+      animation-timing-function: ease;
     }
   }
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
+.hd__heronav {
+  height: auto;
+  z-index: 10;
+  width: 100%;
+  height: 10vh;
+  overflow: scroll;
+  opacity: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.hd__heronav--dsboard,
+.hd__heronav--addxp,
+.hd__heronav--editxp,
+.hd__heronav--contact {
+   color: black;
+  a {
+    text-decoration: none;
+  }
+}
+
+
+
+
+@keyframes scrollMouse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(25px) rotate(0turn);
+  }
+}
+
+
+
+
+
+
