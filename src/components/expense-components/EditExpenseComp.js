@@ -16,10 +16,12 @@ class EditExpenseComp extends Component {
   }
 
   render () {
+    console.log(this)
     return (
       <div id="main">
         <div id='edit-expense' className='dashboard edit-expense'>
-          <h3>Expense Edit</h3>
+          <h3>Expense id: {this.props.match.params.id}</h3>
+
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           Etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas

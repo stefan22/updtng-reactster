@@ -1,0 +1,56 @@
+#add-expense {
+  display: flex;
+  flex-direction: column;
+
+  .addxp__form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 2rem;
+
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),
+  0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+}
+
+.addxp__input-field {
+  padding: 9px 12px;
+  width: 100%;
+  max-width: 230px;
+	font-size: 1rem;
+  margin-bottom: 2rem;
+	border-radius: 4px;
+	line-height: 1;
+  &:hover,&:focus {
+    outline: none;
+  }
+}
+
+.addxp__button-wrap {
+  margin: 2rem 0;
+  button {
+    padding: 7px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 0px black;
+    transition: background-color .25s linear;
+  }
+  button:hover {
+    background-color: #b4bd1f;
+    color: #fafafa;
+    border-color: #a0a81a;
+    outline: none;
+  }
+}
+

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
+import '../../scss/components/add-expense.scss'
 
 class AddExpenseComp extends Component {
 
@@ -21,15 +22,35 @@ class AddExpenseComp extends Component {
       <div id="main">
         <div id='add-expense' className='dashboard add-expense'>
           <h3>Expense Add</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas
-          sed sed risus. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla.
-          Mauris vitae ultricies leo integer malesuada nunc.
-          Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.
-          Sit amet est placerat in. Pretium lectus quam id leo. In eu mi bibendum
-          neque egestas.</p>
+           <div className='addxp__form-wrap'>
 
+            <form
+              onSubmit={this.handleSubmit}
+              id='add-expense--form'
+            >
+              <h3>Add your expenses here</h3>
+              Name:
+              <input
+                className='addxp__input-field'
+                type='text'
+                name='name'
+              />
+
+              Expense:
+              <input
+                className='addxp__input-field'
+                type='text'
+                name='expense'
+              />
+
+              <div className='addxp__button-wrap'>
+                <button type='submit'>
+                  Add Expense
+                </button>
+              </div>
+            </form>
+
+          </div>
         </div>
 
         <nav className='navigation'>
