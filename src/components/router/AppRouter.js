@@ -6,6 +6,7 @@ import AddExpenseComp from '../expense-components/AddExpenseComp'
 import EditExpenseComp from '../expense-components/EditExpenseComp'
 //other comps
 import ContactUsComp from '../ContactUsComp'
+import LoginComp from '../LoginComp'
 import NotFoundComp from '../NotFoundComp'
 //layout comps
 import HeaderComp from '../layout-components/HeaderComp'
@@ -16,9 +17,6 @@ import { TweenLite,TimelineMax, Power2} from 'gsap/all'
 class AppRouter extends Component {
   constructor(props) {
     super(props)
-    this.state ={
-      isMouse: false,
-    }
     this.tm1 = new TimelineMax()
     this.handleScrollMouse = this.handleScrollMouse.bind(this)
   }
@@ -42,19 +40,18 @@ class AppRouter extends Component {
 
 
   render() {
-    const {isMouse} = this.state
 
     return (
       <BrowserRouter>
         <HeaderComp
             handleScrollMouse={this.handleScrollMouse}
             title={'Reactster'}
-            isMouse={isMouse}
         />
         <Switch>
           <Route path='/' component={ExpenseDashboardComp} exact />
           <Route path='/add' component={AddExpenseComp} />
-          <Route path='/edit' component={EditExpenseComp} />
+          <Route path='/edit/:id' component={EditExpenseComp} />
+          <Route path='/login' component={LoginComp} />
           <Route path='/contact-us' component={ContactUsComp} />
           <Route component={NotFoundComp} />
         </Switch>

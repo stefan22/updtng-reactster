@@ -2,14 +2,38 @@
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
   @media screen and (min-width: 768px) {
     display: flex;
   }
 }
 
+.main__navigation__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 25%;
+  margin: 0 1rem;
+  border-right: 1px solid #666666;
+  .main__navigation--navlink {
+    margin: 0;
+  }
+}
+
+.main__navigation__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 21%;
+  margin: 0 2rem;
+  .main__navigation--navlink {
+    margin: 0 1rem;
+  }
+}
+
 .main__navigation--navlink {
   flex: 0 1 auto;
+  margin-right: 7rem;
   color: $whte;
   text-decoration: none;
   font-weight: 600;
