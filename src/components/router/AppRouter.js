@@ -14,49 +14,35 @@ import { TweenLite,TimelineMax, Power2} from 'gsap/all'
 
 
 class AppRouter extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state ={
       isMouse: false,
     }
+    this.tm1 = new TimelineMax()
     this.handleScrollMouse = this.handleScrollMouse.bind(this)
   }
 
-  componentDidMount() {
-    this.setState({
-      isMouse: false,
-    })
-  }
-
   handleScrollMouse() {
-    const tm1 = new TimelineMax()
-    console.log('clicked')
     this.setState({
       isMouse: true,
     })
-
+    //Tweenlite
     TweenLite.to(window, 1, {
       scrollTo: { y: '#hd__heronav', offsetY: 70, autoKill: false},
     })
-
-    tm1.from('#hd__heronav', 1, {
-      opacity: 0,
-      ease: Power2.easeOut,
-    }).to('#hd__heronav',1, {
-      opacity: 1,
-      paddingTop: 50,
-      offsetY: 70,
-      ease: Power2.easeOut,
+    //tm1
+    this.tm1.from('#hd__heronav', 1,{opacity: 0, ease: Power2.easeOut})
+    .to('#hd__heronav',1,{
+        opacity: 1, paddingTop: 50, offsetY: 70,
+        ease: Power2.easeOut,
     }, '-=.35')
   }
 
 
 
-
-
   render() {
     const {isMouse} = this.state
-
 
     return (
       <BrowserRouter>

@@ -1,6 +1,11 @@
 import React, {Component} from "react";
 import { NavLink } from "react-router-dom";
-import icon from "../../images/menu-icon.png";
+//imgs
+import expenses from '../../images/xpic.png'
+import addxp from '../../images/add-ic.png'
+import editxp from '../../images/editic.png'
+import contact from '../../images/contact.png'
+//thrd prty libs
 import {Power2, TimelineMax} from 'gsap/TweenMax'
 
 class HeaderComp extends Component {
@@ -73,11 +78,11 @@ class HeaderComp extends Component {
             className="main__navigation--navlink"
             to="/" activeClassName="is-active" exact>
             <div className="main__navigation--icon">
-              <img src={icon} width="24" height="24" alt='' />
+              <img src={expenses} width="24" height="24" alt='' />
             </div>
             <div className="main__navigation--title">
               Expenses
-              <span>is where the heart is</span>
+              <span>all current expenses</span>
             </div>
           </NavLink>
 
@@ -86,11 +91,11 @@ class HeaderComp extends Component {
             to="/add" activeClassName="is-active">
 
             <div className="main__navigation--icon">
-              <img src={icon} width="24" height="24" alt='' />
+              <img src={addxp} width="24" height="24" alt='' />
             </div>
             <div className="main__navigation--title">
               Add Expense
-              <span>is nourishment for the soul</span>
+              <span>add expenses here</span>
             </div>
           </NavLink>
 
@@ -99,11 +104,11 @@ class HeaderComp extends Component {
             to="/edit" activeClassName="is-active">
 
             <div className="main__navigation--icon">
-              <img src={icon} width="24" height="24" alt='' />
+              <img src={editxp} width="24" height="24" alt='' />
             </div>
             <div className="main__navigation--title">
               Edit Expense
-              <span>guide you on your journey</span>
+              <span>update an existing expense</span>
             </div>
           </NavLink>
 
@@ -112,11 +117,11 @@ class HeaderComp extends Component {
             to="/contact-us" activeClassName="is-active">
 
             <div className="main__navigation--icon">
-              <img src={icon} width="24" height="24" alt='' />
+              <img src={contact} width="24" height="24" alt='' />
             </div>
             <div className="main__navigation--title">
               Contact Us
-              <span>brings new things</span>
+              <span>praise givers welcome</span>
             </div>
           </NavLink>
         </nav>
