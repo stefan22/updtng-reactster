@@ -9,12 +9,20 @@
 }
 
 .main__navigation--navlink {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   color: $whte;
   text-decoration: none;
   font-weight: 600;
   display: flex;
+  opacity: 1;
+  background-color: transparent;
   justify-content: center;
+  mix-blend-mode: initial;
+  transition: opacity .22s linear 0.01s;
+  &:hover {
+    mix-blend-mode: screen;
+    opacity: .95;
+  }
 }
 
 .is-active .main__navigation--title > span {
@@ -22,7 +30,18 @@
 }
 
 .main__navigation--icon {
-  background: aliceblue;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  mix-blend-mode: soft-light;
+  width: 36px;
+  height: 36px;
+
+  img {
+    margin: 0 6px;
+  }
 }
 
 .main__navigation--title {
@@ -34,7 +53,6 @@
     color: #8d8f68;
   }
 }
-
 
 .hd__hero {
   display: flex;
