@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3, Bounce,} from 'gsap/TweenMax'
+import '../scss/components/contact-us.scss'
 
 
 class ContactUsComp extends Component {
@@ -21,14 +22,41 @@ class ContactUsComp extends Component {
       <div id="main">
         <div id='contact-us' className='dashboard contact-us'>
           <h3>Contact Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas
-          sed sed risus. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla.
-          Mauris vitae ultricies leo integer malesuada nunc.
-          Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.
-          Sit amet est placerat in. Pretium lectus quam id leo. In eu mi bibendum
-          neque egestas.</p>
+          <p>sed do eiusmod tempor incididunt.
+          sed do eiusmod tempor incididunt.
+         </p>
+
+          <div className='contactus__form-wrap'>
+
+            <form
+              onSubmit={this.handleSubmit}
+              id='add-expense--form'
+            >
+              <h3>Like to get in touch?</h3>
+              Name:
+              <input
+                className='contactus__input-field'
+                type='text'
+                name='name'
+              />
+
+              Message:
+              <textarea
+                className='contactus__textarea-field'
+                rows={5}
+                cols={15}
+                type='text'
+                name='message'
+              />
+
+              <div className='contactus__button-wrap'>
+                <button type='submit'>
+                  Submit
+                </button>
+              </div>
+            </form>
+
+          </div>
 
 
         </div>

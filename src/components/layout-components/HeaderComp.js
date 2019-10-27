@@ -74,56 +74,60 @@ class HeaderComp extends Component {
       >
         <nav id="main__navigation" className="main__navigation" role="navigation">
 
-          <NavLink
-            className="main__navigation--navlink"
-            to="/" activeClassName="is-active" exact>
-            <div className="main__navigation--icon">
-              <img src={expenses} width="24" height="24" alt='' />
-            </div>
-            <div className="main__navigation--title">
-              Expenses
-              <span>all current expenses</span>
-            </div>
-          </NavLink>
+          <section className='main__navigation__left'>
+            <NavLink
+              className="main__navigation--navlink"
+              to="/" activeClassName="is-active" exact>
+              <div className="main__navigation--icon">
+                <img src={expenses} width="24" height="24" alt='' />
+              </div>
+              <div className="main__navigation--title">
+                Expenses
+                <span>all current expenses</span>
+              </div>
+            </NavLink>
 
-          <NavLink
-            className="main__navigation--navlink"
-            to="/add" activeClassName="is-active">
+            <NavLink
+              className="main__navigation--navlink"
+              to="/add" activeClassName="is-active">
 
-            <div className="main__navigation--icon">
-              <img src={addxp} width="24" height="24" alt='' />
-            </div>
-            <div className="main__navigation--title">
-              Add Expense
-              <span>add expenses here</span>
-            </div>
-          </NavLink>
+              <div className="main__navigation--icon">
+                <img src={addxp} width="24" height="24" alt='' />
+              </div>
+              <div className="main__navigation--title">
+                Add Expense
+                <span>add expenses here</span>
+              </div>
+            </NavLink>
+          </section>
 
-          <NavLink
-            className="main__navigation--navlink"
-            to="/edit" activeClassName="is-active">
+          <section className='main__navigation__right'>
+            <NavLink
+              className="main__navigation--navlink"
+              to="/login" activeClassName="is-active">
 
-            <div className="main__navigation--icon">
-              <img src={editxp} width="24" height="24" alt='' />
-            </div>
-            <div className="main__navigation--title">
-              Edit Expense
-              <span>update an existing expense</span>
-            </div>
-          </NavLink>
+              <div className="main__navigation--icon">
+                <img src={editxp} width="24" height="24" alt='' />
+              </div>
+              <div className="main__navigation--title">
+                Login
+                <span>later to make changes</span>
+              </div>
+            </NavLink>
 
-          <NavLink
-            className="main__navigation--navlink"
-            to="/contact-us" activeClassName="is-active">
+            <NavLink
+              className="main__navigation--navlink"
+              to="/contact-us" activeClassName="is-active">
 
-            <div className="main__navigation--icon">
-              <img src={contact} width="24" height="24" alt='' />
-            </div>
-            <div className="main__navigation--title">
-              Contact Us
-              <span>praise givers welcome</span>
-            </div>
-          </NavLink>
+              <div className="main__navigation--icon">
+                <img src={contact} width="24" height="24" alt='' />
+              </div>
+              <div className="main__navigation--title">
+                Contact Us
+                <span>praise givers welcome</span>
+              </div>
+            </NavLink>
+          </section>
         </nav>
 
         <section
