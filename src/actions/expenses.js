@@ -1,12 +1,12 @@
 import uuid from 'uuid'
 
 //add expense
-export const addExpense = ({desc='',note='',amount=0,created=0}={}) => ({
+export const addExpense = ({name='',desc='',amount=0,created=0}={}) => ({
   type: 'ADD_EXPENSE',
   expense: {
     id: uuid(),
+    name,
     desc,
-    note,
     amount,
     created,
   }

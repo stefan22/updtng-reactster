@@ -33,9 +33,9 @@ export const setEndDate = (endDate) => ({
 export const filterBy = (expenses, {text,sortBy,startDate,endDate}) => {
   return expenses.filter(itm => {
     //created greater than startDate
-    const startDateMatch = typeof itm.startDate === 'number' || itm.created >= startDate;
+    const startDateMatch = typeof itm.startDate !== 'number' || itm.created >= startDate;
     //created less than endDate
-    const endDateMatch = typeof itm.endDate === 'number' || itm.created <= endDate;
+    const endDateMatch = typeof itm.endDate !== 'number' || itm.created <= endDate;
     //search by txt
     const textMatch = itm.desc.toLowerCase().includes(text.toLowerCase());
     //all true
@@ -43,10 +43,10 @@ export const filterBy = (expenses, {text,sortBy,startDate,endDate}) => {
   })
   //sort date/amount
   .sort((a,b) => {
-    if(a.sortBy === 'date') {
+    if (sortBy === 'date') {
       return a.created < b.created ? 1 : -1;
     }
-    else if(a.sortBy === 'amount') {
+    else if(sortBy === 'amount') {
       return a.amount < b.amount ? 1 : -1;
     }
   })

@@ -1,6 +1,6 @@
 const filtersDefault ={
   text: '',
-  sortBy: '',
+  sortBy: 'date',
   startDate: undefined,
   endDate: undefined,
 }

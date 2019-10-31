@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
 import '../../scss/components/add-expense.scss'
+import addXpImg from '../../images/woman.png'
 
 class AddExpenseComp extends Component {
 
@@ -21,33 +22,53 @@ class AddExpenseComp extends Component {
     return (
       <div id="main">
         <div id='add-expense' className='dashboard add-expense'>
-          <h3>Expense Add</h3>
+          <h3>Add New Expense</h3>
            <div className='addxp__form-wrap'>
 
             <form
               onSubmit={this.handleSubmit}
               id='add-expense--form'
             >
-              <h3>Add your expenses here</h3>
-              Name:
-              <input
-                className='addxp__input-field'
-                type='text'
-                name='name'
-              />
+            <div className='addxp__inner-form'>
+              <div className='addxp__left'>
+                <h3>Add your expenses here</h3>
+                Name:
+                <input
+                  className='addxp__input-field'
+                  type='text'
+                  name='name'
+                />
 
-              Expense:
-              <input
-                className='addxp__input-field'
-                type='text'
-                name='expense'
-              />
+                Description:
+                <textarea
+                  className='addxp__textarea-field'
+                  rows={5}
+                  cols={15}
+                  type='text'
+                  name='message'
+                />
 
-              <div className='addxp__button-wrap'>
-                <button type='submit'>
-                  Add Expense
-                </button>
+                Amount:
+                <input
+                  className='addxp__input-field'
+                  type='text'
+                  name='expense'
+                />
+
               </div>
+
+              <div className='addxp__right'>
+                <img src={addXpImg} alt={'add expense'} />
+              </div>
+            </div>
+
+
+            <div className='addxp__button-wrap'>
+              <button type='submit'>
+                Add Expense
+              </button>
+            </div>
+
             </form>
 
           </div>
