@@ -22,9 +22,6 @@ class ContactUsComp extends Component {
       <div id="main">
         <div id='contact-us' className='dashboard contact-us'>
           <h3>Contact Us</h3>
-          <p>sed do eiusmod tempor incididunt.
-          sed do eiusmod tempor incididunt.
-         </p>
 
           <div className='contactus__form-wrap'>
 
