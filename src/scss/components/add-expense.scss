@@ -13,7 +13,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
   border: 1px solid lightgray;
   border-radius: 4px;
   padding: 2rem;
@@ -22,10 +22,45 @@ form {
   0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
 }
 
+.addxp__inner-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .addxp__left {
+    width: 100%;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
+
+  }
+  .addxp__right {
+    display: none;
+    @media screen and (min-width: 768px) {
+      width: 45%;
+      flex: 0 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+
+
+
 .addxp__input-field {
   padding: 9px 12px;
   width: 100%;
-  max-width: 230px;
+  max-width: 275px;
 	font-size: 1rem;
   margin-bottom: 2rem;
 	border-radius: 4px;
@@ -33,6 +68,17 @@ form {
   &:hover,&:focus {
     outline: none;
   }
+}
+.addxp__textarea-field {
+  width: 100%;
+  max-width: 275px;
+	font-size: 1rem;
+  margin-bottom: 2rem;
+	line-height: 1;
+  border: 2px solid #eaeaea;
+  border-top: 2px solid #9a9a9a;
+  border-left: 2px solid #9a9a9a;
+  border-radius: 4px;
 }
 
 .addxp__button-wrap {
