@@ -22,12 +22,6 @@ class LoginComp extends Component {
 
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }
