@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { NavLink } from "react-router-dom";
+import React, {Component} from 'react'
+import { NavLink } from 'react-router-dom'
 //imgs
 import expenses from '../../images/xpic.png'
 import addxp from '../../images/add-ic.png'
@@ -38,7 +38,7 @@ class HeaderComp extends Component {
         //hero.style.display = 'none'
         //heronav.classList.add('intro');
 
-          tm2.to('#heronav',1, {
+        tm2.to('#heronav',1, {
           opacity: 1,
           paddingTop: '5vh',
           ease: Power2.easeOut
@@ -57,8 +57,8 @@ class HeaderComp extends Component {
     this.setState({didScroll: true})
 
     if(didScroll) {
-      let scrolledAmount = e.target.scrollingElement.scrollTop;
-      this.hasScrolled(scrolledAmount);
+      let scrolledAmount = e.target.scrollingElement.scrollTop
+      this.hasScrolled(scrolledAmount)
       this.setState({didScroll: false})
     }
   }
@@ -139,18 +139,18 @@ class HeaderComp extends Component {
             onClick={this.props.handleScrollMouse}
             id='hd__hero--mouse'
             className='hd__hero--mouse'>
-              <span></span>
+            <span></span>
           </div>
         </section>
 
         <nav
-            id='hd__heronav'
-            className='hd__heronav'
-          >
-            <div className='hd__heronav--dsboard'>Dashboard</div>
-            <div className='hd__heronav--addxp'>Add Expense</div>
-            <div className='hd__heronav--editxp'>Edit Expense</div>
-            <div className='hd__heronav--contact'>Contact Us</div>
+          id='hd__heronav'
+          className='hd__heronav'
+        >
+          <div className='hd__heronav--dsboard'>Dashboard</div>
+          <div className='hd__heronav--addxp'>Add Expense</div>
+          <div className='hd__heronav--editxp'>Edit Expense</div>
+          <div className='hd__heronav--contact'>Contact Us</div>
         </nav>
 
 
@@ -161,7 +161,7 @@ class HeaderComp extends Component {
   }
 }
 
-export default HeaderComp;
+export default HeaderComp
 
 //  <nav className='main-navigation'>
 //         <NavLink to='/' activeClassName='is-active' exact>Expenses</NavLink>

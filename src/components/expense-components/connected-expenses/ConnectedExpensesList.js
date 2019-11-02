@@ -6,18 +6,18 @@ import {filterBy} from '../../../actions/filters'
 
 
 const ConnectedExpensesList = ({expenses}) => (
-    <div className='xps__list--wrapper'>
-      <section className='xps__list'>
-        {
-          expenses.map((expense,idx) =>
-           <ExpenseListItem
-              key={idx}
-              {...expense}
-           />
-          )
-        }
-      </section>
-    </div>
+  <div className='xps__list--wrapper'>
+    <section className='xps__list'>
+      {
+        expenses.map((expense,idx) =>
+          <ExpenseListItem
+            key={idx}
+            {...expense}
+          />
+        )
+      }
+    </section>
+  </div>
 )
 
 

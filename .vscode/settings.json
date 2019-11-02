@@ -1,13 +1,10 @@
 {
   "files.exclude": {
     ".gitignore": true,
-    "eslintrc.js": true,
     ".editorConfig": true,
-    "package-lock.json": true,
+    // "package-lock.json": true,
     "src/serviceWorker.js": true,
-    "serviceWorker.js": true,
-    "node_modules": true,
-    "src/*.test.js": true,
+    // "node_modules": true,
   },
   "editor.fontSize": 16,
   "terminal.integrated.fontSize": 16,

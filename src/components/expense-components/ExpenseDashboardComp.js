@@ -12,10 +12,10 @@ class Dashboard extends Component {
       ease: Power3.easeOut,
       y: -1100,
     })
-    .from('#dashboard h3', 1.5, {
-      opacity: 0.25,
-      ease: Bounce.easeOut
-    })
+      .from('#dashboard h3', 1.5, {
+        opacity: 0.25,
+        ease: Bounce.easeOut
+      })
   }
 
 

@@ -5,24 +5,24 @@ import '../../scss/components/add-expense.scss'
 const TextInputField = ({name,label,type,value,onChange,onBlur}) => {
 
   return (
-      <>
-          <TextField>
-            <Label
-              htmlFor={name}
-            >
-              {label}
-            </Label>
-            <InputField
-              id={name}
-              name={name}
-              value={value}
-              type={type}
-              required={true}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-          </TextField>
-        </>
+    <>
+      <TextField>
+        <Label
+          htmlFor={name}
+        >
+          {label}
+        </Label>
+        <InputField
+          id={name}
+          name={name}
+          value={value}
+          type={type}
+          required={true}
+          onChange={onChange}
+          onBlur={onBlur}
+        />
+      </TextField>
+    </>
   )
 
 }
