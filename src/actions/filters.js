@@ -37,9 +37,11 @@ export const filterBy = (expenses, {text,sortBy,startDate,endDate}) => {
     //created less than endDate
     const endDateMatch = typeof itm.endDate !== 'number' || itm.created <= endDate;
     //search by txt
-    const textMatch = itm.desc.toLowerCase().includes(text.toLowerCase());
-    //all true
-    return textMatch && startDateMatch && endDateMatch;
+    const descMatch = itm.desc.toLowerCase().includes(text.toLowerCase());
+    const nameMatch = itm.name.toLowerCase().includes(text.toLowerCase());
+    //by name,desc
+    if(descMatch) return descMatch && startDateMatch && endDateMatch;
+    if(nameMatch) return nameMatch && startDateMatch && endDateMatch;
   })
   //sort date/amount
   .sort((a,b) => {
@@ -48,6 +50,9 @@ export const filterBy = (expenses, {text,sortBy,startDate,endDate}) => {
     }
     else if(sortBy === 'amount') {
       return a.amount < b.amount ? 1 : -1;
+    }
+    else {
+      return expenses
     }
   })
 }
