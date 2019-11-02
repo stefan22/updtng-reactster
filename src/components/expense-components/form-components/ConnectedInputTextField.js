@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../../scss/components/input-textfield.scss'
 import {connect} from 'react-redux'
-import {setTextFilter,filterBy} from '../../../actions/filters'
+import {setTextFilter} from '../../../actions/filters'
 
 
 const ConnectedInputTextField = ({type,name,filters,dispatch}) => {

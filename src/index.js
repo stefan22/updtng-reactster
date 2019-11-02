@@ -25,7 +25,7 @@ store.dispatch(addExpense({
 }))
 store.dispatch(addExpense({
   name: 'Office rent July',
-  desc: 'June rent',
+  desc: 'July rent',
   amount: 850,
 }))
 store.dispatch(addExpense({
@@ -40,7 +40,7 @@ store.dispatch(addExpense({
 }))
 store.dispatch(addExpense({
   name: 'Office rent August',
-  desc: 'June rent',
+  desc: 'August rent',
   amount: 850,
 }))
 

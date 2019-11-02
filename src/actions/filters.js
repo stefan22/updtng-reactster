@@ -39,9 +39,8 @@ export const filterBy = (expenses, {text,sortBy,startDate,endDate}) => {
     //search by txt
     const descMatch = itm.desc.toLowerCase().includes(text.toLowerCase());
     const nameMatch = itm.name.toLowerCase().includes(text.toLowerCase());
-    //by name,desc
-    if(descMatch) return descMatch && startDateMatch && endDateMatch;
-    if(nameMatch) return nameMatch && startDateMatch && endDateMatch;
+    //by name||desc
+    return (nameMatch || descMatch) && startDateMatch && endDateMatch
   })
   //sort date/amount
   .sort((a,b) => {
