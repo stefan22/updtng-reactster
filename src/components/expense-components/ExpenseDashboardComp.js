@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
+import ConnectedExpensesList from './connected-expenses/ConnectedExpensesList'
+import ConnectedInputTextField from './form-components/ConnectedInputTextField'
 
 
 class Dashboard extends Component {
@@ -18,27 +20,24 @@ class Dashboard extends Component {
 
 
   render () {
+
     return (
       <div id="main">
         <div id='dashboard' className='dashboard'>
-          <h3>Expense dashboard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas
-          sed sed risus. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla.
-          Mauris vitae ultricies leo integer malesuada nunc.
-          Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.
-          Sit amet est placerat in. Pretium lectus quam id leo. In eu mi bibendum
-          neque egestas.</p>
+          <div className='dashboard--heading'>
+            <h3>Expense dashboard</h3>
+            <p className='xps__list__par'>
+              Filter Expenses By:
+            </p>
+          </div>
 
+          <ConnectedInputTextField
+            name={'filter'}
+            type={'text'}
+          />
+          <ConnectedExpensesList />
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }

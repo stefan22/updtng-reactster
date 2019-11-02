@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
 import '../../scss/components/add-expense.scss'
-import addXpImg from '../../images/woman.png'
+import addXpImg from '../../images/axp.png'
+
 
 class AddExpenseComp extends Component {
 
@@ -19,10 +20,12 @@ class AddExpenseComp extends Component {
 
 
   render () {
+
     return (
       <div id="main">
         <div id='add-expense' className='dashboard add-expense'>
           <h3>Add New Expense</h3>
+
            <div className='addxp__form-wrap'>
 
             <form
@@ -74,12 +77,6 @@ class AddExpenseComp extends Component {
           </div>
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }
