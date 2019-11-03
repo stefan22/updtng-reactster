@@ -8,8 +8,9 @@ const expensesReducer = (state=expensesDefault,action) => {
       ...state,
       action.expense
     ]
+
   case 'EDIT_EXPENSE':
-    state.filter(itm => {
+    return state.filter(itm => {
       if(itm.id === action.id) {
         return {
           ...itm,
@@ -17,11 +18,10 @@ const expensesReducer = (state=expensesDefault,action) => {
         }
       } else return itm
     })
-    break
-  case 'REMOVE_EXPENSE':
-    state.filter(({id}) => id !== action.id)
 
-    break
+  case 'REMOVE_EXPENSE':
+    return state.filter(({id}) => id !== action.id)
+
   default:
     return state
   }
