@@ -128,6 +128,10 @@
 }
 
 .hd__heronav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   height: auto;
   z-index: 10;
   width: 100%;
@@ -136,12 +140,13 @@
   opacity: 0;
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   @media screen and (min-width: 768px) {
     display: none;
   }
   @media only screen and (min-width: 375px) {
-     height: 12vh;
+     height: 17vh;
   }
 }
 
