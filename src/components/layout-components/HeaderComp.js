@@ -147,10 +147,9 @@ class HeaderComp extends Component {
           id='hd__heronav'
           className='hd__heronav'
         >
-          <div className='hd__heronav--dsboard'>Dashboard</div>
-          <div className='hd__heronav--addxp'>Add Expense</div>
-          <div className='hd__heronav--editxp'>Edit Expense</div>
-          <div className='hd__heronav--contact'>Contact Us</div>
+          <div className='hd__heronav--dsboard'>MY-MOBILE</div>
+          <div className='hd__heronav--addxp'>MENU</div>
+          <div className='hd__heronav--contact'>HERE</div>
         </nav>
 
 

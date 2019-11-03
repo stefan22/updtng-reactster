@@ -10,9 +10,10 @@ const ConnectedInputTextField = ({type,name,filters,dispatch}) => {
     <div className='xps__list--input-wrapper'>
       <input
         className='xps__list__input'
-        onChange={(e)=>
+        placeholder='Enter a search term..'
+        onChange={(e) => {
           dispatch(setTextFilter(e.target.value)
-          )}
+          )}}
         type={type} name={name} value={filters.text} />
     </div>
   )

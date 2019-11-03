@@ -2,7 +2,8 @@ import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
 import ConnectedExpensesList from './connected-expenses/ConnectedExpensesList'
 import ConnectedInputTextField from './form-components/ConnectedInputTextField'
-
+import ConnectedSelectField from './form-components/ConnectedSelectField'
+import dp from '../../images/dp.png'
 
 class Dashboard extends Component {
 
@@ -18,23 +19,25 @@ class Dashboard extends Component {
       })
   }
 
-
   render () {
-
     return (
       <div id="main">
         <div id='dashboard' className='dashboard'>
           <div className='dashboard--heading'>
-            <h3>Expense dashboard</h3>
+            <h3><img src={dp} alt={'dp'} width='30' height='auto' />
+              Expenses dashboard</h3>
             <p className='xps__list__par'>
               Filter Expenses By:
             </p>
           </div>
+          <section className='xps__list--filters-wrapper'>
+            <ConnectedInputTextField
+              name={'filter'}
+              type={'text'}
+            />
+            <ConnectedSelectField />
+          </section>
 
-          <ConnectedInputTextField
-            name={'filter'}
-            type={'text'}
-          />
           <ConnectedExpensesList />
         </div>
 
