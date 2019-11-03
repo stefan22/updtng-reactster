@@ -9,10 +9,10 @@ class EditExpenseComp extends Component {
       ease: Power3.easeOut,
       x: 1500,
     })
-    .from('#edit-expense h3', 1.5, {
-      opacity: 0.25,
-      ease: Bounce.easeOut
-    })
+      .from('#edit-expense h3', 1.5, {
+        opacity: 0.25,
+        ease: Bounce.easeOut
+      })
   }
 
   render () {
@@ -33,12 +33,6 @@ class EditExpenseComp extends Component {
 
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }

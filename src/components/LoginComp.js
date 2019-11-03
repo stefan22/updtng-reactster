@@ -5,11 +5,11 @@ class LoginComp extends Component {
 
 
   render () {
-    console.log(this)
+
     return (
       <div id="main">
         <div id='edit-expense' className='dashboard edit-expense'>
-          <h3>Login comp</h3>
+          <h3>Login leave for after contact-us</h3>
 
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -22,12 +22,6 @@ class LoginComp extends Component {
 
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }

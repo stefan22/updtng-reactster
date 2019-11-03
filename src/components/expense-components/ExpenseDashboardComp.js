@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
-
+import ConnectedExpensesList from './connected-expenses/ConnectedExpensesList'
+import ConnectedInputTextField from './form-components/ConnectedInputTextField'
+import ConnectedSelectField from './form-components/ConnectedSelectField'
+import dp from '../../images/dp.png'
 
 class Dashboard extends Component {
 
@@ -10,35 +13,34 @@ class Dashboard extends Component {
       ease: Power3.easeOut,
       y: -1100,
     })
-    .from('#dashboard h3', 1.5, {
-      opacity: 0.25,
-      ease: Bounce.easeOut
-    })
+      .from('#dashboard h3', 1.5, {
+        opacity: 0.25,
+        ease: Bounce.easeOut
+      })
   }
-
 
   render () {
     return (
       <div id="main">
         <div id='dashboard' className='dashboard'>
-          <h3>Expense dashboard</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Etiam erat velit scelerisque in. Turpis massa sed elementum tempus egestas
-          sed sed risus. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla.
-          Mauris vitae ultricies leo integer malesuada nunc.
-          Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis.
-          Sit amet est placerat in. Pretium lectus quam id leo. In eu mi bibendum
-          neque egestas.</p>
+          <div className='dashboard--heading'>
+            <h3><img src={dp} alt={'dp'} width='30' height='auto' />
+              Expenses dashboard</h3>
+            <p className='xps__list__par'>
+              Filter Expenses By:
+            </p>
+          </div>
+          <section className='xps__list--filters-wrapper'>
+            <ConnectedInputTextField
+              name={'filter'}
+              type={'text'}
+            />
+            <ConnectedSelectField />
+          </section>
 
+          <ConnectedExpensesList />
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }

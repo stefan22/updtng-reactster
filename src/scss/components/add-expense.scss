@@ -1,11 +1,19 @@
 #add-expense {
   display: flex;
+  h3 {
+    @media screen and (min-width: 1024px) {
+      padding: 0 3rem;
+    }
+  }
   flex-direction: column;
-
   .addxp__form-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    min-height: 82vh;
+    @media screen and (min-width: 1024px) {
+      padding: 0 3rem;
+    }
   }
 }
 
@@ -17,9 +25,10 @@ form {
   border: 1px solid lightgray;
   border-radius: 4px;
   padding: 2rem;
+  background: #fafafa;
 
-  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2),
-  0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 .addxp__inner-form {
@@ -34,7 +43,6 @@ form {
     @media screen and (min-width: 768px) {
       width: 50%;
     }
-
   }
   .addxp__right {
     display: none;
@@ -53,28 +61,25 @@ form {
   }
 }
 
-
-
-
-
 .addxp__input-field {
   padding: 9px 12px;
   width: 100%;
   max-width: 275px;
-	font-size: 1rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
-	border-radius: 4px;
-	line-height: 1;
-  &:hover,&:focus {
+  border-radius: 4px;
+  line-height: 1;
+  &:hover,
+  &:focus {
     outline: none;
   }
 }
 .addxp__textarea-field {
   width: 100%;
   max-width: 275px;
-	font-size: 1rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
-	line-height: 1;
+  line-height: 1;
   border: 2px solid #eaeaea;
   border-top: 2px solid #9a9a9a;
   border-left: 2px solid #9a9a9a;
@@ -90,7 +95,7 @@ form {
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0px 0px 2px 0px black;
-    transition: background-color .25s linear;
+    transition: background-color 0.25s linear;
   }
   button:hover {
     background-color: #b4bd1f;
@@ -99,4 +104,3 @@ form {
     outline: none;
   }
 }
-

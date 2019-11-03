@@ -11,10 +11,10 @@ class ContactUsComp extends Component {
       ease: Power3.easeOut,
       y: 1500,
     })
-    .from('#contact-us h3', 1.5, {
-      opacity: 0.25,
-      ease: Bounce.easeOut
-    })
+      .from('#contact-us h3', 1.5, {
+        opacity: 0.25,
+        ease: Bounce.easeOut
+      })
   }
 
   render () {
@@ -58,12 +58,6 @@ class ContactUsComp extends Component {
 
         </div>
 
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
       </div>
     )
   }

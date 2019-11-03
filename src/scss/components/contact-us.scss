@@ -1,10 +1,19 @@
 #contact-us {
   display: flex;
   flex-direction: column;
+  > h3 {
+    @media screen and (min-width: 1024px) {
+      padding: 0 3rem;
+    }
+  }
   .contactus__form-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    min-height: 82vh;
+    @media screen and (min-width: 1024px) {
+      padding: 0 3rem;
+    }
   }
 }
 

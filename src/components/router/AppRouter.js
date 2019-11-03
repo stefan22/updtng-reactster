@@ -31,10 +31,10 @@ class AppRouter extends Component {
     })
     //tm1
     this.tm1.from('#hd__heronav', 1,{opacity: 0, ease: Power2.easeOut})
-    .to('#hd__heronav',1,{
+      .to('#hd__heronav',1,{
         opacity: 1, paddingTop: 50, offsetY: 70,
         ease: Power2.easeOut,
-    }, '-=.35')
+      }, '-=.35')
   }
 
 
@@ -44,8 +44,8 @@ class AppRouter extends Component {
     return (
       <BrowserRouter>
         <HeaderComp
-            handleScrollMouse={this.handleScrollMouse}
-            title={'Reactster'}
+          handleScrollMouse={this.handleScrollMouse}
+          title={'Reactster'}
         />
         <Switch>
           <Route path='/' component={ExpenseDashboardComp} exact />
