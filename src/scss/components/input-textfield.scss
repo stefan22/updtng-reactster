@@ -11,7 +11,6 @@
     margin-bottom: 0;
     flex: 0 1 320px;
   }
-
 }
 
 .xps__list__input {
@@ -27,7 +26,7 @@
 .xps__list__select-wrapper {
   position: relative;
   display: flex;
-  width: 200px;
+  flex: 1 1 auto;
   flex-direction: row;
   overflow: hidden;
   flex-wrap: wrap;
@@ -39,9 +38,9 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   color: white;
-  padding: 10px 12px;
-  flex: 0 1 200px;
-  font-size: 1.7rem;
+  padding: 8px 10px;
+  flex: 0 1 165px;
+  font-size: 1.5rem;
   box-shadow: 0 5px 25px rgba(0, 0, 25px, 0.2);
   -webkit-appearance: button;
   appearance: button;
@@ -49,6 +48,11 @@
   mix-blend-mode: color;
   cursor: pointer;
   transition: background .28s linear 0s, border .25s linear 0s;
+  @media screen and (min-width: 1024px) {
+    padding: 10px 12px;
+    font-size: 1.7rem;
+    flex: 0 1 190px;
+  }
   &:hover {
     background: #3b4686;
     border: 1px solid #424242;
@@ -58,16 +62,21 @@
 .xps__list__select-wrapper::after {
   content: '';
   position: absolute;
-  border-left: 9px solid transparent;
-  border-right: 9px solid transparent;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
   z-index: -1;
-  left: 160px;
+  left: 135px;
   text-align: center;
   width: 0;
 	height: 0;
-	border-top: 15px solid rgba(255, 255, 255, 0.15);
+  top: 14px;
+	border-top: 12px solid rgba(255, 255, 255, 0.15);
   @media screen and (min-width: 1024px) {
-     top: 17px;
+    border-top: 15px solid rgba(255, 255, 255, 0.15);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    left: 150px;
+    top: 17px;
   }
 }
 
