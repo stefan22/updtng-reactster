@@ -1,8 +1,10 @@
 #add-expense {
   display: flex;
-  h3 {
+  h2 {
+    color: #3b4686;
+    text-align: center;
     @media screen and (min-width: 1024px) {
-      padding: 0 3rem;
+      padding: 0 2rem;
     }
   }
   flex-direction: column;
@@ -10,97 +12,129 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 82vh;
     @media screen and (min-width: 1024px) {
-      padding: 0 3rem;
+      padding: 0 2rem;
+      max-width: 820px;
     }
   }
 }
 
-form {
+#add-expense__form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 850px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  padding: 2rem;
-  background: #fafafa;
-
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+  flex: 1 1 auto;
+  padding: 0 1rem;
+  @media screen and (min-width: 1024px) {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 2rem;
+    background: #fafafa;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  }
 }
 
 .addxp__inner-form {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+    justify-content: space-between;
+  }
   .addxp__left {
-    width: 100%;
     flex: 0 1 auto;
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1024px) {
       width: 50%;
     }
   }
   .addxp__right {
     display: none;
-    @media screen and (min-width: 768px) {
-      width: 45%;
-      flex: 0 1 auto;
+    @media screen and (min-width:768px) {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       img {
         width: 100%;
-        max-width: 340px;
         height: auto;
+        max-width: 90px;
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      flex-direction: column;
+      width: 40%;
+      justify-content: center;
+      img {
+        max-width: 340px;
+
       }
     }
   }
 }
 
+#add-expense .addxp__left h3 {
+  color: #434847;
+  text-align: left;
+}
+
 .addxp__input-field {
+  font-size: 1.5rem;
   padding: 9px 12px;
-  width: 100%;
-  max-width: 275px;
-  font-size: 1rem;
+  flex: 1 1 auto;
   margin-bottom: 2rem;
   border-radius: 4px;
   line-height: 1;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex: 0 1 auto;
+  }
   &:hover,
   &:focus {
     outline: none;
   }
 }
 .addxp__textarea-field {
-  width: 100%;
-  max-width: 275px;
-  font-size: 1rem;
+  flex: 1 1 auto;
+  padding: 9px 12px;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   line-height: 1;
   border: 2px solid #eaeaea;
   border-top: 2px solid #9a9a9a;
   border-left: 2px solid #9a9a9a;
   border-radius: 4px;
+   @media screen and (min-width: 1024px) {
+    display: flex;
+    flex: 0 1 auto;
+  }
 }
 
 .addxp__button-wrap {
   margin: 2rem 0;
+  display: flex;
   button {
-    padding: 7px 20px;
+    background-color: #434847;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    color: white;
+    padding: 10px 20px;
+    flex: 1 1 auto;
     font-weight: 600;
     font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0px 0px 2px 0px black;
-    transition: background-color 0.25s linear;
-  }
-  button:hover {
-    background-color: #b4bd1f;
-    color: #fafafa;
-    border-color: #a0a81a;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 25, 0.2);
     outline: none;
+    cursor: pointer;
+    transition: background .28s linear 0s, border .25s linear 0s;
+    &:hover {
+      background: #3b4686;
+      border: 1px solid #424242;
+    }
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex: 0 1 275px;
+      justify-content: center;
+    }
   }
 }
