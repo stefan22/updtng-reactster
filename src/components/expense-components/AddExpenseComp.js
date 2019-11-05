@@ -24,22 +24,24 @@ class AddExpenseComp extends Component {
     return (
       <div id="main">
         <div id='add-expense' className='dashboard add-expense'>
-          <h3>Add New Expense</h3>
+          <h2>Add New Expense</h2>
 
           <div className='addxp__form-wrap'>
 
             <form
               onSubmit={this.handleSubmit}
-              id='add-expense--form'
+              id='add-expense__form'
             >
               <div className='addxp__inner-form'>
                 <div className='addxp__left'>
-                  <h3>Add your expenses here</h3>
+                  <h3>Fill out form to add expense.</h3>
                 Name:
                   <input
                     className='addxp__input-field'
+                    autoFocus
                     type='text'
                     name='name'
+                    placeholder='expense name'
                   />
 
                 Description:
@@ -48,14 +50,16 @@ class AddExpenseComp extends Component {
                     rows={5}
                     cols={15}
                     type='text'
-                    name='message'
+                    name='description'
+                    placeholder='expense description'
                   />
 
                 Amount:
                   <input
                     className='addxp__input-field'
-                    type='text'
-                    name='expense'
+                    type='number'
+                    name='amount'
+                    placeholder='expense amount'
                   />
 
                 </div>
