@@ -72,10 +72,10 @@ class AddExpenseComp extends Component {
 
   handleSubmitExpense(e) {
     e.preventDefault()
-    const {expense: {amount,desc}} = this.state
+    const {expense: {amount,desc},errAmt,errDesc} = this.state
     if(amount === 0) this.setState(() => ({errAmt: true}))
     if(desc.length < 3) this.setState(() => ({errDesc: true}))
-    else {
+    else if(!errAmt && !errDesc) {
       this.setState(() => ({//clear values
         expense:{
           name: '',
