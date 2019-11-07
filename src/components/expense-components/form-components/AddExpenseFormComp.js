@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import '../../../scss/components/add-expense.scss'
+import {TimelineMax,Bounce} from 'gsap/TweenMax'
 import addXpImg from '../../../images/axp.png'
 
 
@@ -16,6 +17,20 @@ class AddExpenseFormComp extends Component {
       errDesc: false,
     }
     this.handleSubmitExpense = this.handleSubmitExpense.bind(this)
+  }
+
+  componentDidMount() {
+    const axfp = new TimelineMax()
+    axfp.from('.addxp__right img', 1.65, {
+      y: -950,
+      ease: Bounce.easeOut,
+    },'+=.35')
+    axfp.from('.addxp__left h3', 1.25, {
+      opacity:.25,
+      y: -350,
+      ease: Bounce.easeOut,
+    },'-=.15')
+
   }
 
    handleExpenseChange = (e) => {
