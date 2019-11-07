@@ -25,7 +25,7 @@ class AddExpenseComp extends Component {
       x: - 1500,
       ease: Power3.easeOut,
     })
-      .from('#add-expense h3', 1.5, {
+      .from('#add-expense h2', 1.5, {
         opacity: 0.25,
         ease: Bounce.easeOut
       })
