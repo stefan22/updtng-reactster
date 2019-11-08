@@ -46,7 +46,6 @@ class AddExpenseFormComp extends Component {
        )
      }
      if(type === 'textarea') {
-       console.log(value.length)
        this.setState({
          expense: {
            ...this.state.expense,
@@ -64,7 +63,7 @@ class AddExpenseFormComp extends Component {
          this.setState({
            expense: {
              ...this.state.expense,
-             [name]: Number(value)
+             [name]: parseFloat(val,10)
            },
            errAmt: (Number(value) > 0) ? false : true,
          })
@@ -84,6 +83,7 @@ class AddExpenseFormComp extends Component {
            amount: 0,
            desc: '',
          }}))
+       this.props.handleOnSubmit(this.state.expense)
        console.log('form submitted')
      }
    }

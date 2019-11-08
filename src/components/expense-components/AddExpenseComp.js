@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {TimelineMax, Power3,Bounce} from 'gsap/TweenMax'
 import AddExpenseFormComp from './form-components/AddExpenseFormComp'
-
+import {connect} from 'react-redux'
+import {addExpense} from '../../actions/expenses'
 
 class AddExpenseComp extends Component {
 
@@ -18,17 +19,19 @@ class AddExpenseComp extends Component {
   }
 
 
-
-
   render () {
-
 
     return (
       <div id="main">
         <div id='add-expense' className='dashboard add-expense'>
           <h2>Add New Expense</h2>
 
-          <AddExpenseFormComp />
+          <AddExpenseFormComp
+            handleOnSubmit={(expense) => {
+              this.props.dispatch(addExpense(expense))
+              this.props.history.push('/')
+            }}
+          />
 
         </div>
 
@@ -37,4 +40,4 @@ class AddExpenseComp extends Component {
   }
 }
 
-export default AddExpenseComp
+export default connect()(AddExpenseComp)
