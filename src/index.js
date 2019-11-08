@@ -20,7 +20,7 @@ store.dispatch(addExpense({
 }))
 store.dispatch(addExpense({
   name: 'Office supplies June',
-  desc: 'Dominos: 45 large pepperoni and mushrooms, think crust pizzas',
+  desc: 'Dominos: 45 large pepperoni and mushrooms, thin crust pizzas',
   amount: 320,
 }))
 store.dispatch(addExpense({
@@ -35,7 +35,7 @@ store.dispatch(addExpense({
 }))
 store.dispatch(addExpense({
   name: 'Office supplies July',
-  desc: 'Dominos: 45 large pepperoni and mushrooms, think crust pizzas',
+  desc: 'Dominos: 45 large pepperoni and mushrooms, thin crust pizzas',
   amount: 320,
 }))
 store.dispatch(addExpense({
