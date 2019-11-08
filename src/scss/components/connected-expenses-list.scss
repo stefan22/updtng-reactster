@@ -13,7 +13,8 @@
     flex-direction: column;
 
   }
-  h3 {
+  h2 {
+    color: #263238;
     opacity: 1;
     line-height: 1.45;
     font-size: 2.5rem;
@@ -56,6 +57,7 @@
   border-radius: 4px;
   margin: 1rem 0;
   padding: 1rem;
+  background: #f9fcfd;
   border: 1px solid lightgray;
   border-top: 1px solid #bbbbbb;
   border-right: 1px solid #dcdcdc;
@@ -68,6 +70,8 @@
     text-align: left;
     padding: 0 1rem;
     max-width: 225px;
+    color: #7a7c5b;
+    font-size: 1.75rem;
   }
 }
 
@@ -84,15 +88,16 @@
   top: 30px;
   padding: 7px 10px;
   border-radius: 4px;
-  background: #FF5722;
-  border: 1px solid #BF360C;
+  background-color: #686d27;
+  border: 1px solid #e0e0e0;
   cursor: pointer;
   color: white;
   font-size: 12px;
   font-weight: 600;
   transition: background .3s linear, border .25s linear;
   &:hover {
-    background: #d64717;
+    background: #3e6d1e;
+    border: 1px solid #336d08;
   }
   &:focus {
     outline: none;

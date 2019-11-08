@@ -13,7 +13,7 @@ class Dashboard extends Component {
       ease: Power3.easeOut,
       y: -1100,
     })
-      .from('#dashboard h3', 1.5, {
+      .from('#dashboard h2', 1.5, {
         opacity: 0.25,
         ease: Bounce.easeOut
       })
@@ -24,8 +24,8 @@ class Dashboard extends Component {
       <div id="main">
         <div id='dashboard' className='dashboard'>
           <div className='dashboard--heading'>
-            <h3><img src={dp} alt={'dp'} width='30' height='auto' />
-              Expenses dashboard</h3>
+            <h2><img src={dp} alt={'dp'} width='30' height='auto' />
+              Expenses dashboard</h2>
             <p className='xps__list__par'>
               Filter Expenses By:
             </p>
