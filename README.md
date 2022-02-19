@@ -5,7 +5,7 @@
 
 <h2 align="center">updtng-reactster</h2>
 
-Pending review (can't remember) and so it lives to see another day for now.  🩹 📆. 😇.  📋
+ 🩹 📆. 😇.  📋
 
 
 - initial settings with routes, greensock and redux
