@@ -6,7 +6,6 @@
     @media screen and (min-width: 1024px) {
       padding: 0 2rem;
       font-size: 2.5rem;
-
     }
   }
   flex-direction: column;
@@ -35,8 +34,7 @@
     padding: 2rem;
     background: #fafafa;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -70,7 +68,7 @@
   }
   .addxp__right {
     display: none;
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
       display: flex;
       img {
         width: 100%;
@@ -84,7 +82,6 @@
       justify-content: center;
       img {
         max-width: 340px;
-
       }
     }
   }
@@ -122,7 +119,7 @@
   border-top: 2px solid #9a9a9a;
   border-left: 2px solid #9a9a9a;
   border-radius: 4px;
-   @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     display: flex;
     flex: 0 1 auto;
   }
@@ -142,7 +139,7 @@
     box-shadow: 0 0 7px 0 rgba(0, 0, 25, 0.2);
     outline: none;
     cursor: pointer;
-    transition: background .28s linear 0s, border .25s linear 0s;
+    transition: background 0.28s linear 0s, border 0.25s linear 0s;
     &:hover {
       background: #3e6d1e;
       border: 1px solid #336d08;

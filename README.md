@@ -3,18 +3,27 @@
 <br />
 
 
-<h2 align="center">updtng-reactster</h2>
+<h2 align="center">Updtng-reactster</h2>
 
  🩹 📆. 😇.  📋
 
 
-- initial settings with routes, greensock and redux
-- rx store, working good with filters
-- so far so good..
+- A starting templating-type application with routes, 
+- Redux CRUD to create, delete expenses
+- Redux Store w/2 reducers for expenses & filtering expenses
+- GSAP easing pages animation (top-bottom, and left-to-right)
+  
+  
 
 
 <br/><br/>
 
-[initial setup]
+[screenshots]
 
-![](./src/images/sofar.png)
+![All Expenses](./src/images/All-Expenses.png)
+
+<br />
+
+![Add Expense](./src/images/Add-Expense.png)
+
+![Landing mobile](./src/images/sofar.png)
