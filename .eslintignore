@@ -1,0 +1,10 @@
+**/components/__tests__/**
+node_modules/**
+build/**
+public/**
+src/serviceWorker.js
+
+src/reportWebVitals.js
+setupTests.js
+
+**/*.test.js
