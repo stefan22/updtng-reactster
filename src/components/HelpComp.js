@@ -1,26 +1,16 @@
-import React, {Component} from 'react'
-
+import React, { Component } from "react";
 
 class HelpComp extends Component {
-
-  render () {
+  render() {
     return (
       <div id="main">
-        <div className='dashboard'>
+        <div className="dashboard">help comp</div>
 
-          help comp
-
-        </div>
-
-        <nav className='navigation'>
-          nav
-        </nav>
-        <aside className='results'>
-          aside
-        </aside>
+        <nav className="navigation">nav</nav>
+        <aside className="results">aside</aside>
       </div>
-    )
+    );
   }
 }
 
-export default HelpComp
+export default HelpComp;

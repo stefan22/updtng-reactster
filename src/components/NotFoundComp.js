@@ -1,20 +1,13 @@
-import React, {Component} from 'react'
-
+import React, { Component } from "react";
 
 class NotFoundComp extends Component {
-
-  render () {
+  render() {
     return (
       <div id="main">
-        <div className='dashboard'>
-
-          404 Not found
-
-        </div>
-
+        <div className="dashboard">404 Not found</div>
       </div>
-    )
+    );
   }
 }
 
-export default NotFoundComp
+export default NotFoundComp;
